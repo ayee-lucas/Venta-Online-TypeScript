@@ -1,6 +1,6 @@
 /** Server App Dependencies */
 
-import express, { Router } from "express";
+import express, { Request, Response, NextFunction } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import helmet from "helmet";
@@ -31,7 +31,7 @@ async function mongo() {
 /** Only start the server if Mongo Connects */
 
 const StartServer = () => {
-  router.use((req, res, next) => {
+  router.use((req: Request, res: Response, next: NextFunction) => {
     /** Log the request */
     Logging.info(`Incoming -> Method [${req.method}] - [${req.url}]`);
 
@@ -54,12 +54,12 @@ const StartServer = () => {
   router.use("/users", userRoutes);
 
   /** Healthcheck */
-  router.get("/ping", (req, res, next) =>
+  router.get("/ping", (req: Request, res: Response, next: NextFunction) =>
     ServerStatus.internal200OK(res, "Running", "")
   );
 
   /** Error handling */
-  router.use((req, res, next) => {
+  router.use((req: Request, res: Response, next: NextFunction) => {
     const error = new Error("not found");
     Logging.error(error);
 

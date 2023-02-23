@@ -22,7 +22,7 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2023-02-23T06:53:51.897Z",
-    "modified": "2023-02-23T07:15:06.970Z",
+    "modified": "2023-02-23T02:22:32.752Z",
     "headers": [],
     "params": [],
     "body": {
@@ -43,7 +43,8 @@
         },
         {
           "name": "password",
-          "value": "123"
+          "value": "123",
+          "isDisabled": true
         },
         {
           "name": "email",
