@@ -8,6 +8,8 @@ import { dbConnect } from "./config/config";
 
 const router = express();
 
+/** Connection to Database */
+
 async function mongo() {
   try {
     mongoose.set("strictQuery", false);
