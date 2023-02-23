@@ -7,20 +7,20 @@ export default class Logging {
     console.log(
       chalk.blue(`[${new Date().toLocaleString()}]
     [INFO]`),
-      typeof args === "string" ? chalk.blueBright(args) : args
+      typeof args === "string" ? chalk.greenBright(args) : args
     );
 
   public static warn = (args: any) =>
     console.log(
-      chalk.blue(`[${new Date().toLocaleString()}]
+      chalk.yellow(`[${new Date().toLocaleString()}]
     [INFO]`),
       typeof args === "string" ? chalk.yellowBright(args) : args
     );
 
   public static error = (args: any) =>
     console.log(
-      chalk.blue(`[${new Date().toLocaleString()}]
+      chalk.red(`[${new Date().toLocaleString()}]
     [INFO]`),
-      typeof args === "string" ? chalk.redBright(args) : args
+      typeof args === "string" ? chalk.red(args) : args
     );
 }

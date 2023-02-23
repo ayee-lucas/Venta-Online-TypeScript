@@ -2,8 +2,9 @@ import express, { Router } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import helmet from "helmet";
-import { dbConnect } from "./config/config";
 import Logging from "./library/loggin";
+import ServerStatus from "./library/server_status";
+import { dbConnect } from "./config/config";
 
 const router = express();
 
@@ -44,7 +45,7 @@ const StartServer = () => {
 
   /** Healthcheck */
   router.get("/ping", (req, res, next) =>
-    res.status(200).json({ message: "pong" })
+    ServerStatus.internal200OK(res, "Running", "")
   );
 
   /** Error handling */
