@@ -12,5 +12,53 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "cacc7ea8-817d-468a-a49f-b4d340422fc7",
+    "colId": "be173003-597e-4462-aa75-341250e4d3c0",
+    "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
+    "name": "create user",
+    "url": "/users/create",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-02-23T06:53:51.897Z",
+    "modified": "2023-02-23T07:15:06.970Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Alan"
+        },
+        {
+          "name": "surname",
+          "value": "Lopez"
+        },
+        {
+          "name": "username",
+          "value": "alopez"
+        },
+        {
+          "name": "password",
+          "value": "123"
+        },
+        {
+          "name": "email",
+          "value": "alopez@a.com"
+        },
+        {
+          "name": "phone",
+          "value": "923839"
+        },
+        {
+          "name": "role",
+          "value": "client"
+        }
+      ]
+    },
+    "tests": []
   }
 ]

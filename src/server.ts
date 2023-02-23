@@ -1,3 +1,5 @@
+/** Server App Dependencies */
+
 import express, { Router } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -5,6 +7,10 @@ import helmet from "helmet";
 import Logging from "./library/loggin";
 import ServerStatus from "./library/server_status";
 import { dbConnect } from "./config/config";
+
+/** Import Routes */
+
+import userRoutes from "./routes/user.routes";
 
 const router = express();
 
@@ -44,6 +50,8 @@ const StartServer = () => {
   router.use(helmet());
 
   /** Routes */
+
+  router.use("/users", userRoutes);
 
   /** Healthcheck */
   router.get("/ping", (req, res, next) =>

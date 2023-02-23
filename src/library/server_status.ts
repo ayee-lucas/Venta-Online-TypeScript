@@ -47,12 +47,10 @@ export default class ServerStatus {
     message: String,
     obj: any
   ) => {
-    let responseReturn = res
-      .status(500)
-      .send({
-        message: `SERVER 500 INTERNAL SERVER ERROR [${message}]`,
-        obj: obj,
-      });
+    let responseReturn = res.status(500).send({
+      message: `SERVER 500 INTERNAL SERVER ERROR [${message}]`,
+      obj: obj,
+    });
     return responseReturn;
   };
 
