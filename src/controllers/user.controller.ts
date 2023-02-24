@@ -45,15 +45,25 @@ const login = async (req: Request, res: Response) => {
     let token = JWT.createToken(findedUser);
 
     return findedUser
-      ? ServerStatus.internal200OK(res, "User logged in", token)
+      ? ServerStatus.internal200OK(res, "User logged in", [findedUser, token])
       : ServerStatus.internal404NOTFOUND(
           res,
           "Check your credentials user not found",
           data
         );
   } catch (error) {
-    ServerStatus.internal500ERROR(res, "Error Creating Token", token);
+    return ServerStatus.internal500ERROR(res, "Error Creating Token", token);
   }
 };
 
-export default { createUser, login, adminStatus };
+const update = async (req: Request, res: Response) => {
+  try {
+    //const user = {user: };
+    //  const data = req.body;
+    return res.send({ message: req.user });
+  } catch (error) {
+    return ServerStatus.internal500ERROR(res, "Error Updating User", "");
+  }
+};
+
+export default { createUser, login, update, adminStatus };

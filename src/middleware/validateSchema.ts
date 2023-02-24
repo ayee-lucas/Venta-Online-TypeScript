@@ -5,8 +5,6 @@ import ServerStatus from "../library/server_status";
 import { IUser } from "../models/user.model";
 import userController from "../controllers/user.controller";
 
-const isAdmin: Boolean = userController.adminStatus;
-
 export const ValidateSchema = (schema: ObjectSchema) => {
   return async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -22,16 +20,6 @@ export const ValidateSchema = (schema: ObjectSchema) => {
       );
     }
   };
-};
-
-const roleValidation = (adminStatus: Boolean) => {
-  if (adminStatus) {
-    return Joi.object({ role: Joi.string().default("CLIENT").forbidden() });
-    //return { role: Joi.string().default("CLIENT").forbidden() };
-  } else {
-    return Joi.object({ role: Joi.string().required() });
-    //return { role: Joi.string().required() };
-  }
 };
 
 export const Schemas = {

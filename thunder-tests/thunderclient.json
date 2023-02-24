@@ -71,11 +71,11 @@
     "colId": "be173003-597e-4462-aa75-341250e4d3c0",
     "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
     "name": "login",
-    "url": "/users/update",
-    "method": "PUT",
+    "url": "/users/login",
+    "method": "POST",
     "sortNum": 40000,
     "created": "2023-02-24T03:51:49.878Z",
-    "modified": "2023-02-24T04:33:00.256Z",
+    "modified": "2023-02-24T05:01:29.704Z",
     "headers": [],
     "params": [],
     "body": {
@@ -89,6 +89,64 @@
         {
           "name": "password",
           "value": "123"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "709cc003-1523-4208-9970-3e5ac29a9392",
+    "colId": "be173003-597e-4462-aa75-341250e4d3c0",
+    "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
+    "name": "update",
+    "url": "/users/update",
+    "method": "PUT",
+    "sortNum": 50000,
+    "created": "2023-02-24T05:02:08.989Z",
+    "modified": "2023-02-24T06:46:38.018Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": " \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2M2Y4MDBhNzU1ZjEyZWVkNDYwMjc0NmEiLCJuYW1lIjoiQWxhbiIsInN1cm5hbWUiOiJMb3BleiIsImVtYWlsIjoiYWxvcGV6QGEuY29tIiwicGhvbmUiOiI5MjM4MzkiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNjc3MjIxMTEzLCJleHAiOjE2NzcyMjEyOTN9.6kWn2YIR3TwP_2KDUy0qnWhJU59tqrBQkQ-fUa88M-w\""
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Alan"
+        },
+        {
+          "name": "surname",
+          "value": "Lopez"
+        },
+        {
+          "name": "username",
+          "value": "alopez8"
+        },
+        {
+          "name": "password",
+          "value": "123"
+        },
+        {
+          "name": "email",
+          "value": "alopez@a.com"
+        },
+        {
+          "name": "phone",
+          "value": "923839"
+        },
+        {
+          "name": "role",
+          "value": "d"
+        },
+        {
+          "name": "a",
+          "value": "a",
+          "isDisabled": true
         }
       ]
     },

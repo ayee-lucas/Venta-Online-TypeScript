@@ -83,7 +83,7 @@ export default class ServerStatus {
   ) => {
     let responseReturn = res
       .status(403)
-      .send({ message: `SERVER 403 NOT FOUND [${message}]`, obj: obj });
+      .send({ message: `SERVER 403 FORBIDDEN [${message}]`, obj: obj });
     return responseReturn;
   };
 }
