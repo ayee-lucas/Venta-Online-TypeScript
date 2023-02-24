@@ -3,6 +3,10 @@ import JWT, { Secret, JwtPayload } from "jsonwebtoken";
 import Logging from "../library/loggin";
 import ServerStatus from "../library/server_status";
 
+export interface CustomRequest extends Request {
+  user: string | JwtPayload;
+}
+
 export const ensureAuth = () => {
   return async (req: Request, res: Response, next: NextFunction) => {
     if (!req.headers.authorization) {
@@ -11,11 +15,7 @@ export const ensureAuth = () => {
       return ServerStatus.internal403FORBIDDEN(res, "No content", err);
     } else {
       try {
-        //let token = req.headers.authorization.replace(/['"]/g, "") | JwtPayload;
-
-        //let token = req.headers.authorization.replace(/['"]/g, "");
-
-        let token: any = req.header("Authorization")?.replace(/['"]/g, "");
+        let token: any = req.headers.authorization.replace(/['"]/g, "");
 
         var decoded = JWT.verify(token, `${process.env.SECRET_KEY}`);
 
@@ -37,8 +37,7 @@ export const ensureAuth = () => {
         //
       }
 
-      req.user = payload;
-
+      (req as CustomRequest).user = payload;
       next();
     }
   };

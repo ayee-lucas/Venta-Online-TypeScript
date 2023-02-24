@@ -7,6 +7,7 @@ import encrypt from "../library/encrypt";
 import utils from "../library/utils";
 import JWT from "../library/jwt";
 import { token } from "morgan";
+import { CustomRequest } from "../middleware/ensureAuth";
 
 let adminStatus: Boolean = false;
 
@@ -58,9 +59,10 @@ const login = async (req: Request, res: Response) => {
 
 const update = async (req: Request, res: Response) => {
   try {
-    //const user = {user: };
-    //  const data = req.body;
-    return res.send({ message: req.user });
+    const loggedInUser = (req as CustomRequest).user;
+    const user = { user: loggedInUser };
+
+    return res.send({ message: user });
   } catch (error) {
     return ServerStatus.internal500ERROR(res, "Error Updating User", "");
   }
