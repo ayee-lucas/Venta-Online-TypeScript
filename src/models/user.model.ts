@@ -1,7 +1,13 @@
 import mongoose, { Document, Schema } from "mongoose";
 
 export interface IUser {
+  name: String;
+  surname: String;
+  username: String;
   password: String;
+  email: String;
+  phone: String;
+  role: String;
 }
 
 export interface IUserModel extends IUser, Document {}

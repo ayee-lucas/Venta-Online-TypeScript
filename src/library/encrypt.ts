@@ -1,6 +1,5 @@
 import bcrypt from "bcrypt";
 import Logging from "./loggin";
-import ServerStatus from "./server_status";
 
 const encrypt = async (password: any) => {
   try {

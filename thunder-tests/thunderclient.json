@@ -22,7 +22,7 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2023-02-23T06:53:51.897Z",
-    "modified": "2023-02-23T02:22:32.752Z",
+    "modified": "2023-02-24T03:35:47.702Z",
     "headers": [],
     "params": [],
     "body": {
@@ -39,12 +39,11 @@
         },
         {
           "name": "username",
-          "value": "alopez"
+          "value": "alopez8"
         },
         {
           "name": "password",
-          "value": "123",
-          "isDisabled": true
+          "value": "123"
         },
         {
           "name": "email",
@@ -56,7 +55,40 @@
         },
         {
           "name": "role",
-          "value": "client"
+          "value": "d"
+        },
+        {
+          "name": "a",
+          "value": "a",
+          "isDisabled": true
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "7c01bcd8-d9a4-4d10-b546-d5c29d002dd0",
+    "colId": "be173003-597e-4462-aa75-341250e4d3c0",
+    "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
+    "name": "login",
+    "url": "/users/update",
+    "method": "PUT",
+    "sortNum": 40000,
+    "created": "2023-02-24T03:51:49.878Z",
+    "modified": "2023-02-24T04:33:00.256Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "username",
+          "value": "alopez3"
+        },
+        {
+          "name": "password",
+          "value": "123"
         }
       ]
     },
