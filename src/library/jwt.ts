@@ -11,11 +11,12 @@ export default class JWT {
         sub: user._id,
         name: user.name,
         surname: user.surname,
+        username: user.username,
         email: user.email,
         phone: user.phone,
         role: user.role,
         iat: Math.floor(Date.now() / 1000),
-        exp: Math.floor(Date.now() / 1000) + (60 + 120),
+        exp: Math.floor(Date.now() / 1000) + (60 + 1000),
       };
       return jwt.sign(payload, `${process.env.SECRET_KEY}`);
     } catch (err) {

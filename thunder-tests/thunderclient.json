@@ -8,7 +8,7 @@
     "method": "GET",
     "sortNum": 20000,
     "created": "2023-02-23T04:30:19.937Z",
-    "modified": "2023-02-23T05:56:00.270Z",
+    "modified": "2023-02-26T03:06:58.019Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -22,7 +22,7 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2023-02-23T06:53:51.897Z",
-    "modified": "2023-02-24T03:35:47.702Z",
+    "modified": "2023-02-26T03:08:06.304Z",
     "headers": [],
     "params": [],
     "body": {
@@ -39,7 +39,7 @@
         },
         {
           "name": "username",
-          "value": "alopez8"
+          "value": "alopez11"
         },
         {
           "name": "password",
@@ -75,7 +75,7 @@
     "method": "POST",
     "sortNum": 40000,
     "created": "2023-02-24T03:51:49.878Z",
-    "modified": "2023-02-24T05:01:29.704Z",
+    "modified": "2023-02-26T06:00:13.159Z",
     "headers": [],
     "params": [],
     "body": {
@@ -84,7 +84,7 @@
       "form": [
         {
           "name": "username",
-          "value": "alopez3"
+          "value": "alopez101"
         },
         {
           "name": "password",
@@ -99,15 +99,15 @@
     "colId": "be173003-597e-4462-aa75-341250e4d3c0",
     "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
     "name": "update",
-    "url": "/users/update",
+    "url": "/users/update/63f82b4ce3f02851eda27a68",
     "method": "PUT",
     "sortNum": 50000,
     "created": "2023-02-24T05:02:08.989Z",
-    "modified": "2023-02-24T06:46:38.018Z",
+    "modified": "2023-02-26T05:22:50.955Z",
     "headers": [
       {
         "name": "Authorization",
-        "value": " \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2M2Y4MDBhNzU1ZjEyZWVkNDYwMjc0NmEiLCJuYW1lIjoiQWxhbiIsInN1cm5hbWUiOiJMb3BleiIsImVtYWlsIjoiYWxvcGV6QGEuY29tIiwicGhvbmUiOiI5MjM4MzkiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNjc3MjIxMTEzLCJleHAiOjE2NzcyMjEyOTN9.6kWn2YIR3TwP_2KDUy0qnWhJU59tqrBQkQ-fUa88M-w\""
+        "value": "{{tokenUser}}"
       }
     ],
     "params": [],
@@ -125,7 +125,7 @@
         },
         {
           "name": "username",
-          "value": "alopez8"
+          "value": "alopez102"
         },
         {
           "name": "password",
@@ -142,14 +142,28 @@
         {
           "name": "role",
           "value": "d"
-        },
-        {
-          "name": "a",
-          "value": "a",
-          "isDisabled": true
         }
       ]
     },
+    "tests": []
+  },
+  {
+    "_id": "c4ca8f1e-4a19-4051-8583-34ff080c5037",
+    "colId": "be173003-597e-4462-aa75-341250e4d3c0",
+    "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
+    "name": "deleteUser",
+    "url": "/users/delete/63f800a755f12eed4602746a",
+    "method": "DELETE",
+    "sortNum": 60000,
+    "created": "2023-02-26T05:30:21.751Z",
+    "modified": "2023-02-26T06:04:18.583Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "{{tokenUser}}"
+      }
+    ],
+    "params": [],
     "tests": []
   }
 ]

@@ -14,6 +14,7 @@ router.post(
 );
 
 router.post("/login", ValidateSchema(Schemas.users.login), controller.login);
-router.put("/update", ensureAuth(), userController.update);
+router.put("/update/:id", ensureAuth(), userController.update);
+router.delete("/delete/:id", ensureAuth(), userController.deleteUser);
 
 export = router;

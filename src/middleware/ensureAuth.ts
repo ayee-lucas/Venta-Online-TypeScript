@@ -4,7 +4,17 @@ import Logging from "../library/loggin";
 import ServerStatus from "../library/server_status";
 
 export interface CustomRequest extends Request {
-  user: string | JwtPayload;
+  user: {
+    sub: string;
+    name: string;
+    surname: string;
+    username: string;
+    email: string;
+    phone: string;
+    role: string;
+    iat: string;
+    exp: string;
+  };
 }
 
 export const ensureAuth = () => {
@@ -12,7 +22,11 @@ export const ensureAuth = () => {
     if (!req.headers.authorization) {
       const err = new Error("Needs Authorization");
       Logging.warn(err);
-      return ServerStatus.internal403FORBIDDEN(res, "No content", err);
+      return ServerStatus.internal403FORBIDDEN(
+        res,
+        "No content auth, check logs",
+        err
+      );
     } else {
       try {
         let token: any = req.headers.authorization.replace(/['"]/g, "");
