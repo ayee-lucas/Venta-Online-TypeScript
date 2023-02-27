@@ -3,13 +3,12 @@ import { Request, Response, NextFunction } from "express";
 import Logging from "../library/loggin";
 import ServerStatus from "../library/server_status";
 import { IUser } from "../models/user.model";
-import userController from "../controllers/user.controller";
+import { IProduct } from "../models/product.model";
 
 export const ValidateSchema = (schema: ObjectSchema) => {
   return async (req: Request, res: Response, next: NextFunction) => {
     try {
       await schema.validateAsync(req.body);
-
       next();
     } catch (err) {
       Logging.error(`Error Validate Schema [${err}]`);
@@ -49,6 +48,15 @@ export const Schemas = {
         .default("CLIENT")
         .valid("CLIENT", "ADMIN")
         .insensitive(),
+    }),
+  },
+  products: {
+    create: Joi.object<IProduct>({
+      name: Joi.string().required(),
+      description: Joi.string().required(),
+      category: Joi.string().required(),
+      price: Joi.number().required(),
+      stock: Joi.number().required(),
     }),
   },
 };
