@@ -22,7 +22,7 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2023-02-23T06:53:51.897Z",
-    "modified": "2023-02-26T03:08:06.304Z",
+    "modified": "2023-02-27T13:56:49.322Z",
     "headers": [],
     "params": [],
     "body": {
@@ -39,7 +39,7 @@
         },
         {
           "name": "username",
-          "value": "alopez11"
+          "value": "alopez9"
         },
         {
           "name": "password",
@@ -75,7 +75,7 @@
     "method": "POST",
     "sortNum": 40000,
     "created": "2023-02-24T03:51:49.878Z",
-    "modified": "2023-02-26T06:00:13.159Z",
+    "modified": "2023-02-27T14:39:31.194Z",
     "headers": [],
     "params": [],
     "body": {
@@ -84,11 +84,11 @@
       "form": [
         {
           "name": "username",
-          "value": "alopez101"
+          "value": "alopez107"
         },
         {
           "name": "password",
-          "value": "123"
+          "value": "1234"
         }
       ]
     },
@@ -99,11 +99,11 @@
     "colId": "be173003-597e-4462-aa75-341250e4d3c0",
     "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
     "name": "update",
-    "url": "/users/update/63f82b4ce3f02851eda27a68",
+    "url": "/users/update/63fcb471d2050404e9f17f53",
     "method": "PUT",
     "sortNum": 50000,
     "created": "2023-02-24T05:02:08.989Z",
-    "modified": "2023-02-26T05:22:50.955Z",
+    "modified": "2023-02-27T14:37:12.298Z",
     "headers": [
       {
         "name": "Authorization",
@@ -125,7 +125,7 @@
         },
         {
           "name": "username",
-          "value": "alopez102"
+          "value": "alopez107"
         },
         {
           "name": "password",
@@ -137,11 +137,11 @@
         },
         {
           "name": "phone",
-          "value": "923839"
+          "value": "92383"
         },
         {
           "name": "role",
-          "value": "d"
+          "value": "client"
         }
       ]
     },
@@ -152,11 +152,11 @@
     "colId": "be173003-597e-4462-aa75-341250e4d3c0",
     "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
     "name": "deleteUser",
-    "url": "/users/delete/63f800a755f12eed4602746a",
+    "url": "/users/delete/63fcb471d2050404e9f17f53",
     "method": "DELETE",
     "sortNum": 60000,
     "created": "2023-02-26T05:30:21.751Z",
-    "modified": "2023-02-26T06:04:18.583Z",
+    "modified": "2023-02-27T14:39:03.085Z",
     "headers": [
       {
         "name": "Authorization",

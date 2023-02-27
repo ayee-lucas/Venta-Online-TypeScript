@@ -37,5 +37,18 @@ export const Schemas = {
       username: Joi.string().required(),
       password: Joi.string().required(),
     }),
+    update: Joi.object<IUser>({
+      name: Joi.string().optional(),
+      surname: Joi.string().optional(),
+      username: Joi.string().optional(),
+      password: Joi.string().optional(),
+      email: Joi.string().optional(),
+      phone: Joi.string().optional(),
+      role: Joi.string()
+        .optional()
+        .default("CLIENT")
+        .valid("CLIENT", "ADMIN")
+        .insensitive(),
+    }),
   },
 };

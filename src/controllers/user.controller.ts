@@ -91,7 +91,7 @@ const update = async (req: Request, res: Response) => {
 
     Logging.warn({ UserToUpdate: findUserToUpdate });
 
-    if (adminStatus && findUserToUpdate?.role == "ADMIN") {
+    if (adminStatus && findUserToUpdate.role == "ADMIN") {
       return ServerStatus.internal403FORBIDDEN(
         res,
         "You can not update an admin user",
@@ -101,6 +101,8 @@ const update = async (req: Request, res: Response) => {
 
     utils.deleteEntryBooleanArg(adminStatus, data, "role");
     utils.deleteEntryBooleanArg(adminStatus, data, "password");
+
+    adminStatus ? (data.password = await encrypt(data.password)) : NaN;
 
     Logging.warn({ data: data });
 
@@ -145,7 +147,7 @@ const deleteUser = async (req: Request, res: Response) => {
       );
     }
 
-    if (adminStatus && findUserToDelete?.role == "ADMIN") {
+    if (adminStatus && findUserToDelete.role == "ADMIN") {
       return ServerStatus.internal403FORBIDDEN(
         res,
         "You can not update an admin user",
@@ -153,7 +155,7 @@ const deleteUser = async (req: Request, res: Response) => {
       );
     }
 
-    const userFindedId = findUserToDelete?._id.toString();
+    const userFindedId = findUserToDelete._id.toString();
 
     Logging.warn({ _id: userFindedId });
 
