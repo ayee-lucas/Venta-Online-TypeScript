@@ -11,6 +11,8 @@ import { dbConnect } from "./config/config";
 /** Import Routes */
 
 import userRoutes from "./routes/user.routes";
+import productRoutes from "./routes/product.routes";
+import categoryRoutes from "./routes/category.routes";
 
 const router = express();
 
@@ -52,6 +54,8 @@ const StartServer = () => {
   /** Routes */
 
   router.use("/users", userRoutes);
+  router.use("/products", productRoutes);
+  router.use("/");
 
   /** Healthcheck */
   router.get("/ping", (req: Request, res: Response, next: NextFunction) =>

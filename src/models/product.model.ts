@@ -1,4 +1,4 @@
-import mongoose, { Document, Schema } from "mongoose";
+import mongoose, { Document, mongo, Schema } from "mongoose";
 
 export interface IProduct {
   name: string;
@@ -22,8 +22,8 @@ const ProductSchema: Schema = new Schema(
       required: true,
     },
     category: {
-      type: String,
-      required: true,
+      type: mongoose.Types.ObjectId,
+      ref: "Category",
     },
     price: {
       type: Number,

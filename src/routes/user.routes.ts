@@ -1,6 +1,4 @@
 import express from "express";
-import userController from "../controllers/user.controller";
-
 import controller from "../controllers/user.controller";
 import { Schemas, ValidateSchema } from "../middleware/validateSchema";
 import { ensureAuth } from "../middleware/ensureAuth";
@@ -18,8 +16,8 @@ router.put(
   "/update/:id",
   ensureAuth(),
   ValidateSchema(Schemas.users.update),
-  userController.update
+  controller.update
 );
-router.delete("/delete/:id", ensureAuth(), userController.deleteUser);
+router.delete("/delete/:id", ensureAuth(), controller.deleteUser);
 
 export = router;
