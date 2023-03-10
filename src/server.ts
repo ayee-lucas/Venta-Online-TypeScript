@@ -55,7 +55,7 @@ const StartServer = () => {
 
   router.use("/users", userRoutes);
   router.use("/products", productRoutes);
-  router.use("/");
+  router.use("/category", categoryRoutes);
 
   /** Healthcheck */
   router.get("/ping", (req: Request, res: Response, next: NextFunction) =>

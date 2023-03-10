@@ -7,14 +7,14 @@
     "folders": [
       {
         "_id": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
-        "name": "Users",
+        "name": "ADMIN",
         "containerId": "",
         "created": "2023-02-23T06:53:43.901Z",
         "sortNum": 10000
       },
       {
         "_id": "101ae9fd-2159-4269-b619-a29854a985c3",
-        "name": "Maestros",
+        "name": "User",
         "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
         "created": "2023-02-27T16:56:40.871Z",
         "sortNum": 20000
@@ -22,14 +22,14 @@
       {
         "_id": "1d1f3a3d-8011-41bc-902f-d5aeb30541fe",
         "name": "Products",
-        "containerId": "",
+        "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
         "created": "2023-02-27T17:14:24.057Z",
         "sortNum": 30000
       },
       {
         "_id": "4686b27d-08ea-4495-b7bb-9567775bf661",
         "name": "Category",
-        "containerId": "",
+        "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
         "created": "2023-03-03T13:23:06.809Z",
         "sortNum": 40000
       }

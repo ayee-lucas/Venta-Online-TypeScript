@@ -16,13 +16,13 @@
   {
     "_id": "cacc7ea8-817d-468a-a49f-b4d340422fc7",
     "colId": "be173003-597e-4462-aa75-341250e4d3c0",
-    "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
+    "containerId": "101ae9fd-2159-4269-b619-a29854a985c3",
     "name": "create user",
     "url": "/users/create",
     "method": "POST",
-    "sortNum": 30000,
+    "sortNum": 10000,
     "created": "2023-02-23T06:53:51.897Z",
-    "modified": "2023-02-27T13:56:49.322Z",
+    "modified": "2023-03-10T14:42:55.887Z",
     "headers": [],
     "params": [],
     "body": {
@@ -39,7 +39,7 @@
         },
         {
           "name": "username",
-          "value": "alopez9"
+          "value": "alopez4"
         },
         {
           "name": "password",
@@ -69,13 +69,13 @@
   {
     "_id": "7c01bcd8-d9a4-4d10-b546-d5c29d002dd0",
     "colId": "be173003-597e-4462-aa75-341250e4d3c0",
-    "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
+    "containerId": "101ae9fd-2159-4269-b619-a29854a985c3",
     "name": "login",
     "url": "/users/login",
     "method": "POST",
-    "sortNum": 40000,
+    "sortNum": 20000,
     "created": "2023-02-24T03:51:49.878Z",
-    "modified": "2023-02-27T14:39:31.194Z",
+    "modified": "2023-03-10T14:44:18.699Z",
     "headers": [],
     "params": [],
     "body": {
@@ -84,11 +84,11 @@
       "form": [
         {
           "name": "username",
-          "value": "alopez107"
+          "value": "alopez9"
         },
         {
           "name": "password",
-          "value": "1234"
+          "value": "123"
         }
       ]
     },
@@ -97,13 +97,13 @@
   {
     "_id": "709cc003-1523-4208-9970-3e5ac29a9392",
     "colId": "be173003-597e-4462-aa75-341250e4d3c0",
-    "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
+    "containerId": "101ae9fd-2159-4269-b619-a29854a985c3",
     "name": "update",
-    "url": "/users/update/63fcb471d2050404e9f17f53",
+    "url": "/users/update/640b341bd504bb0581f4db12",
     "method": "PUT",
-    "sortNum": 50000,
+    "sortNum": 40000,
     "created": "2023-02-24T05:02:08.989Z",
-    "modified": "2023-02-27T14:37:12.298Z",
+    "modified": "2023-03-10T14:43:08.482Z",
     "headers": [
       {
         "name": "Authorization",
@@ -141,7 +141,7 @@
         },
         {
           "name": "role",
-          "value": "client"
+          "value": "admin"
         }
       ]
     },
@@ -150,13 +150,13 @@
   {
     "_id": "c4ca8f1e-4a19-4051-8583-34ff080c5037",
     "colId": "be173003-597e-4462-aa75-341250e4d3c0",
-    "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
+    "containerId": "101ae9fd-2159-4269-b619-a29854a985c3",
     "name": "deleteUser",
-    "url": "/users/delete/63fcb471d2050404e9f17f53",
+    "url": "/users/delete/640b3410f3977e12b0a6d729",
     "method": "DELETE",
-    "sortNum": 60000,
+    "sortNum": 30000,
     "created": "2023-02-26T05:30:21.751Z",
-    "modified": "2023-02-27T14:39:03.085Z",
+    "modified": "2023-03-10T14:43:06.489Z",
     "headers": [
       {
         "name": "Authorization",
@@ -199,11 +199,87 @@
     "colId": "be173003-597e-4462-aa75-341250e4d3c0",
     "containerId": "4686b27d-08ea-4495-b7bb-9567775bf661",
     "name": "ping",
-    "url": "",
+    "url": "/category/test",
     "method": "GET",
     "sortNum": 90000,
     "created": "2023-03-03T13:23:14.066Z",
-    "modified": "2023-03-03T13:23:14.066Z",
-    "headers": []
+    "modified": "2023-03-10T02:49:15.357Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "77d5102d-272a-4daa-a0dc-373cf0d9d2e0",
+    "colId": "be173003-597e-4462-aa75-341250e4d3c0",
+    "containerId": "4686b27d-08ea-4495-b7bb-9567775bf661",
+    "name": "create",
+    "url": "/category/new-category",
+    "method": "POST",
+    "sortNum": 100000,
+    "created": "2023-03-10T12:34:02.990Z",
+    "modified": "2023-03-10T13:17:37.832Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "drinks"
+        },
+        {
+          "name": "description",
+          "value": "All Shoes"
+        },
+        {
+          "name": "products",
+          "value": "pan"
+        },
+        {
+          "name": "antonio",
+          "value": "",
+          "isDisabled": true
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "000b6b6c-08fa-440e-8f0b-cc2bbce55100",
+    "colId": "be173003-597e-4462-aa75-341250e4d3c0",
+    "containerId": "4686b27d-08ea-4495-b7bb-9567775bf661",
+    "name": "update",
+    "url": "/category/update-category/640b2b1d3dc368f216a6c3f2",
+    "method": "PUT",
+    "sortNum": 110000,
+    "created": "2023-03-10T13:20:17.346Z",
+    "modified": "2023-03-10T14:44:50.233Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "{{tokenAdmin}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "House"
+        },
+        {
+          "name": "description",
+          "value": "All Houses"
+        },
+        {
+          "name": "products",
+          "value": "pan"
+        }
+      ]
+    },
+    "tests": []
   }
 ]

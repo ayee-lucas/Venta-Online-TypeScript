@@ -4,6 +4,7 @@ import Logging from "../library/loggin";
 import ServerStatus from "../library/server_status";
 import { IUser } from "../models/user.model";
 import { IProduct } from "../models/product.model";
+import { ICategory } from "../models/category.model";
 
 export const ValidateSchema = (schema: ObjectSchema) => {
   return async (req: Request, res: Response, next: NextFunction) => {
@@ -57,6 +58,18 @@ export const Schemas = {
       category: Joi.string().required(),
       price: Joi.number().required(),
       stock: Joi.number().required(),
+    }),
+  },
+  category: {
+    create: Joi.object<ICategory>({
+      name: Joi.string().required(),
+      description: Joi.string().required(),
+      products: Joi.string().optional(),
+    }),
+    update: Joi.object<ICategory>({
+      name: Joi.string().optional(),
+      description: Joi.string().optional(),
+      products: Joi.string().optional(),
     }),
   },
 };
