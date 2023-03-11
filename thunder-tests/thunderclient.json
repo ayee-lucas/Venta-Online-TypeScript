@@ -22,7 +22,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2023-02-23T06:53:51.897Z",
-    "modified": "2023-03-10T14:42:55.887Z",
+    "modified": "2023-03-11T11:56:58.677Z",
     "headers": [],
     "params": [],
     "body": {
@@ -39,7 +39,7 @@
         },
         {
           "name": "username",
-          "value": "alopez4"
+          "value": "alopez5"
         },
         {
           "name": "password",
@@ -684,6 +684,59 @@
       }
     ],
     "params": [],
+    "tests": []
+  },
+  {
+    "_id": "00c9e0b8-ffbe-424c-a104-6a4a0677c7af",
+    "colId": "be173003-597e-4462-aa75-341250e4d3c0",
+    "containerId": "7cd60a7b-7414-4bf1-8f64-df5b61d4f6fe",
+    "name": "Register",
+    "url": "/users/create",
+    "method": "POST",
+    "sortNum": 240000,
+    "created": "2023-03-11T11:56:07.037Z",
+    "modified": "2023-03-11T11:56:10.841Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Alan"
+        },
+        {
+          "name": "surname",
+          "value": "Lopez"
+        },
+        {
+          "name": "username",
+          "value": "alopez4"
+        },
+        {
+          "name": "password",
+          "value": "123"
+        },
+        {
+          "name": "email",
+          "value": "alopez@a.com"
+        },
+        {
+          "name": "phone",
+          "value": "923839"
+        },
+        {
+          "name": "role",
+          "value": "d"
+        },
+        {
+          "name": "a",
+          "value": "a",
+          "isDisabled": true
+        }
+      ]
+    },
     "tests": []
   }
 ]
