@@ -32,6 +32,48 @@
         "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
         "created": "2023-03-03T13:23:06.809Z",
         "sortNum": 40000
+      },
+      {
+        "_id": "7cd60a7b-7414-4bf1-8f64-df5b61d4f6fe",
+        "name": "USER",
+        "containerId": "",
+        "created": "2023-03-11T03:06:18.155Z",
+        "sortNum": 50000
+      },
+      {
+        "_id": "b1df9621-01bf-4e26-b449-dda12a8dfb96",
+        "name": "Products",
+        "containerId": "7cd60a7b-7414-4bf1-8f64-df5b61d4f6fe",
+        "created": "2023-03-11T03:18:32.715Z",
+        "sortNum": 60000
+      },
+      {
+        "_id": "85a38471-4d81-4a92-b7f1-b39621b8104b",
+        "name": "Category",
+        "containerId": "7cd60a7b-7414-4bf1-8f64-df5b61d4f6fe",
+        "created": "2023-03-11T03:19:02.801Z",
+        "sortNum": 70000
+      },
+      {
+        "_id": "414ae0c7-c9a6-491f-8abe-df980cc0306f",
+        "name": "Cart",
+        "containerId": "7cd60a7b-7414-4bf1-8f64-df5b61d4f6fe",
+        "created": "2023-03-11T03:33:06.894Z",
+        "sortNum": 80000
+      },
+      {
+        "_id": "2578e8b8-177d-41fb-8848-fcc43b06c65f",
+        "name": "Bills",
+        "containerId": "bfafd50f-37ca-4536-a9e4-c5a89846efad",
+        "created": "2023-03-11T09:44:36.573Z",
+        "sortNum": 90000
+      },
+      {
+        "_id": "9313b221-7d51-455f-9823-ea54582db34d",
+        "name": "Factura",
+        "containerId": "7cd60a7b-7414-4bf1-8f64-df5b61d4f6fe",
+        "created": "2023-03-11T09:44:53.971Z",
+        "sortNum": 100000
       }
     ],
     "settings": {

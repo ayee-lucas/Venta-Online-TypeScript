@@ -59,6 +59,15 @@ export const Schemas = {
       price: Joi.number().required(),
       stock: Joi.number().required(),
     }),
+    update: Joi.object<IProduct>({
+      name: Joi.string().required(),
+      description: Joi.string().required(),
+      category: Joi.string().required(),
+      price: Joi.number().required(),
+    }),
+    updateStock: Joi.object<IProduct>({
+      stock: Joi.number().required(),
+    }),
   },
   category: {
     create: Joi.object<ICategory>({

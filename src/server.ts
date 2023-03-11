@@ -13,6 +13,8 @@ import { dbConnect } from "./config/config";
 import userRoutes from "./routes/user.routes";
 import productRoutes from "./routes/product.routes";
 import categoryRoutes from "./routes/category.routes";
+import cartRoutes from "./routes/cart.routes";
+import receiptRoutes from "./routes/receipt.routes";
 
 const router = express();
 
@@ -56,6 +58,8 @@ const StartServer = () => {
   router.use("/users", userRoutes);
   router.use("/products", productRoutes);
   router.use("/category", categoryRoutes);
+  router.use("/cart", cartRoutes);
+  router.use("/bill", receiptRoutes);
 
   /** Healthcheck */
   router.get("/ping", (req: Request, res: Response, next: NextFunction) =>

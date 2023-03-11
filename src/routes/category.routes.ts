@@ -29,16 +29,22 @@ router.put(
 );
 
 //Delete Category
-router.delete("/remove-category/:id", controller.deleteCategory);
+router.delete(
+  "/remove-category/:id",
+  ensureAuth(),
+  isAdmin(),
+  controller.deleteCategory
+);
 
 /**PUBLIC ROUTES */
 
 //Get Categories
-router.get("/show-categories", controller.getCategories);
+router.get("/show-categories", ensureAuth(), controller.getCategories);
 
 //Get Products by Categories
-router.get(
+router.post(
   "/showProducts_by_Category",
+  ensureAuth(),
   ValidateSchema(Schemas.category.update),
   controller.getProducts_Categories
 );

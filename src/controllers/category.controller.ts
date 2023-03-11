@@ -51,6 +51,13 @@ const update = async (req: Request, res: Response) => {
     const categoryId = req.params.id;
     const categoryFinded = await Category.findOne({ _id: categoryId });
 
+    if (!categoryFinded)
+      return ServerStatus.internal404NOTFOUND(
+        res,
+        "Category Not Found",
+        categoryFinded
+      );
+
     Logging.info(categoryFinded?.name);
     const data = req.body;
 
@@ -152,7 +159,7 @@ const deleteCategory = async (req: Request, res: Response) => {
       { category: DEFAULT_CATEGORY_ID }
     );
 
-    ServerStatus.internal200OK(res, "a", updateProducts);
+    ServerStatus.internal200OK(res, "Category Delete Success", updateProducts);
   } catch (err) {
     Logging.error(err),
       ServerStatus.internal500ERROR(res, "Error Deleting category", err);
