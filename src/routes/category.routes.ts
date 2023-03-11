@@ -28,4 +28,18 @@ router.put(
   controller.update
 );
 
+//Delete Category
+router.delete("/remove-category/:id", controller.deleteCategory);
+
+/**PUBLIC ROUTES */
+
+//Get Categories
+router.get("/show-categories", controller.getCategories);
+
+//Get Products by Categories
+router.get(
+  "/showProducts_by_Category",
+  ValidateSchema(Schemas.category.update),
+  controller.getProducts_Categories
+);
 export = router;

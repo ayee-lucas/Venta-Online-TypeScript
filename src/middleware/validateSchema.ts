@@ -15,7 +15,7 @@ export const ValidateSchema = (schema: ObjectSchema) => {
       Logging.error(`Error Validate Schema [${err}]`);
       ServerStatus.internal500ERROR(
         res,
-        "Error validating Schema",
+        "Error validating Schema  --> CHECK LOGS",
         ValidateSchema
       );
     }
@@ -70,6 +70,9 @@ export const Schemas = {
       name: Joi.string().optional(),
       description: Joi.string().optional(),
       products: Joi.string().optional(),
+    }),
+    showProduct: Joi.object<ICategory>({
+      name: Joi.string().required(),
     }),
   },
 };

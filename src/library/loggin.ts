@@ -13,14 +13,14 @@ export default class Logging {
   public static warn = (args: any) =>
     console.log(
       chalk.yellow(`[${new Date().toLocaleString()}]
-    [INFO]`),
+    [WARN]`),
       typeof args === "string" ? chalk.yellowBright(args) : args
     );
 
   public static error = (args: any) =>
     console.log(
       chalk.red(`[${new Date().toLocaleString()}]
-    [INFO]`),
+    [ERROR]`),
       typeof args === "string" ? chalk.red(args) : args
     );
 }

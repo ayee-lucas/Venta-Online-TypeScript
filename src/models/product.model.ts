@@ -22,6 +22,7 @@ const ProductSchema: Schema = new Schema(
       required: true,
     },
     category: {
+      default: "DEFAULT",
       type: mongoose.Types.ObjectId,
       ref: "Category",
     },

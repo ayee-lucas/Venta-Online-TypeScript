@@ -16,7 +16,7 @@ export default class JWT {
         phone: user.phone,
         role: user.role,
         iat: Math.floor(Date.now() / 1000),
-        exp: Math.floor(Date.now() / 1000) + (60 + 1000),
+        exp: Math.floor(Date.now() / 1000) + (1000 + 1000),
       };
       return jwt.sign(payload, `${process.env.SECRET_KEY}`);
     } catch (err) {

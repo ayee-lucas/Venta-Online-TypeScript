@@ -6,6 +6,16 @@ import { ensureAuth } from "../middleware/ensureAuth";
 const router = express.Router();
 
 router.get("/test-product", controller.testProduct);
+
+/**PRIVATE ROUTES */
+
+// CREATE
 router.post("/create", controller.createProduct);
+
+/**PUBLIC ROUTES */
+
+//Get Products
+
+router.get("/show-products", controller.getAllProducts);
 
 export = router;

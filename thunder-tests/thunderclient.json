@@ -75,7 +75,7 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2023-02-24T03:51:49.878Z",
-    "modified": "2023-03-10T14:44:18.699Z",
+    "modified": "2023-03-10T23:38:02.806Z",
     "headers": [],
     "params": [],
     "body": {
@@ -189,9 +189,35 @@
     "method": "POST",
     "sortNum": 80000,
     "created": "2023-03-03T12:24:27.770Z",
-    "modified": "2023-03-03T12:33:56.883Z",
+    "modified": "2023-03-11T00:31:16.073Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Table"
+        },
+        {
+          "name": "description",
+          "value": "Amarilla"
+        },
+        {
+          "name": "category",
+          "value": "640bcbb3e301443bbb1043c2"
+        },
+        {
+          "name": "price",
+          "value": "100"
+        },
+        {
+          "name": "stock",
+          "value": "1000"
+        }
+      ]
+    },
     "tests": []
   },
   {
@@ -217,8 +243,13 @@
     "method": "POST",
     "sortNum": 100000,
     "created": "2023-03-10T12:34:02.990Z",
-    "modified": "2023-03-10T13:17:37.832Z",
-    "headers": [],
+    "modified": "2023-03-11T00:30:43.864Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "{{tokenAdmin}}"
+      }
+    ],
     "params": [],
     "body": {
       "type": "formencoded",
@@ -226,11 +257,11 @@
       "form": [
         {
           "name": "name",
-          "value": "drinks"
+          "value": "House"
         },
         {
           "name": "description",
-          "value": "All Shoes"
+          "value": "All food"
         },
         {
           "name": "products",
@@ -280,6 +311,77 @@
         }
       ]
     },
+    "tests": []
+  },
+  {
+    "_id": "2f02484d-ba74-469f-8127-8e5d1d67fa9f",
+    "colId": "be173003-597e-4462-aa75-341250e4d3c0",
+    "containerId": "4686b27d-08ea-4495-b7bb-9567775bf661",
+    "name": "get",
+    "url": "/category/show-categories",
+    "method": "GET",
+    "sortNum": 130000,
+    "created": "2023-03-10T16:15:22.371Z",
+    "modified": "2023-03-10T16:16:25.028Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a14d6607-49bf-4cd3-b22d-2e0729485fa5",
+    "colId": "be173003-597e-4462-aa75-341250e4d3c0",
+    "containerId": "1d1f3a3d-8011-41bc-902f-d5aeb30541fe",
+    "name": "show products",
+    "url": "/products/show-products",
+    "method": "GET",
+    "sortNum": 140000,
+    "created": "2023-03-10T21:10:40.145Z",
+    "modified": "2023-03-10T21:10:55.490Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "10f1c1b8-998b-4414-a7cc-a036677419fa",
+    "colId": "be173003-597e-4462-aa75-341250e4d3c0",
+    "containerId": "4686b27d-08ea-4495-b7bb-9567775bf661",
+    "name": "show products by category",
+    "url": "/category/showProducts_by_Category",
+    "method": "GET",
+    "sortNum": 150000,
+    "created": "2023-03-10T21:29:12.926Z",
+    "modified": "2023-03-11T00:35:25.271Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formencoded",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "default"
+        },
+        {
+          "name": "a",
+          "value": "a",
+          "isDisabled": true
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "25809061-1807-4a62-9bef-3630fd1cef5e",
+    "colId": "be173003-597e-4462-aa75-341250e4d3c0",
+    "containerId": "4686b27d-08ea-4495-b7bb-9567775bf661",
+    "name": "DeleteCategory",
+    "url": "/category/remove-category/640bcbb3e301443bbb1043c2",
+    "method": "DELETE",
+    "sortNum": 160000,
+    "created": "2023-03-10T22:16:54.083Z",
+    "modified": "2023-03-11T00:33:27.221Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]
